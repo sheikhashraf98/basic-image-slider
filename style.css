@@ -1,0 +1,133 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    width:100vw;
+    height: 100vh;
+    background-color: black;
+    font-size: 16px;
+}
+
+nav a{
+    text-decoration: none;
+    color: inherit;
+}
+nav ul li{
+    list-style-type: none;
+    cursor: pointer;
+    height: 100%;
+    display:  flex;
+    align-items: center;
+    padding: 10px;
+    font-size: 18px;
+}
+nav ul li:hover{
+    background-color:  rgb(9, 9, 123);
+}
+#main-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 80%;
+    height: 56px;
+    margin: 0 24px;
+}
+nav{
+    background-color: blue;
+    color: white;
+}
+#submenu{
+    position: relative;
+}
+#submenu-list{
+    display: none;
+    border-radius: 10px;
+    min-width: 100%;
+    background-color: blue;
+    position: absolute;
+    z-index: 1;
+    top: 56px;
+    left: 0;
+    border: 1px solid grey;
+}
+#submenu li {
+    height: 40px;
+}
+#submenu:hover #submenu-list{
+    display: block
+}
+.basic-img-slider{
+    position: relative;
+    height: 360px;
+    background-color: gray;
+}
+.basic-img-slider button{
+    width: 40px;
+    height: 60px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.007);
+    font-size: 24px;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.basic-img-slider button:hover{
+    background-color: rgba(50, 50, 50, 0.5);
+}
+.basic-img-slider button:active{
+    opacity: 0.5;
+}
+ .basic-img-slider .left-btn-div,.basic-img-slider .right-btn-div{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    width: 40px;
+    height: 100%;
+    top: 0;
+}
+.basic-img-slider .left-btn-div{
+    left: 0;
+}
+.basic-img-slider .right-btn-div{
+    right: 0;
+}
+
+.basic-img-slider .dots{
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+.basic-img-slider .dots span{
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: #afafaf80;
+}
+.basic-img-slider .dots span:first-child{
+    background-color: white;
+}
+.basic-img-slider img{
+    display: block;
+    width: 100%;
+    height: 360px;
+    background-color: rgb(145, 145, 197);
+    object-fit: cover;
+}
+ @media (min-height: 800px) {
+    .basic-img-slider{
+        height: 480px;
+    }
+ }
